@@ -13,7 +13,6 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-
     let result: T[] = [];
     result = result.concat(...arrays);
     return result;
@@ -27,7 +26,6 @@ class Vehicle {
         console.log(`Make: ${this.make}, Year: ${this.year}`);
     }
 }
-
 class Car extends Vehicle {
     constructor(make: string, year: number, private model: string) {
         super(make, year);
@@ -35,5 +33,10 @@ class Car extends Vehicle {
     getModel(): void {
         console.log(`Model: ${this.model}`);
     }
+}
+
+
+function processValue(value: string | number): number{
+    return typeof value === "string" ? value.length : value * 2;
 }
 
