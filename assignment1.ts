@@ -7,9 +7,16 @@ function formatString(input: string, toUpper?: boolean): string {
     }
 }
 
-function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[]{
-    return items.filter(item=>item.rating >= 4.0)
+function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
+    return items.filter(item => item.rating >= 4.0)
 }
 
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+
+    let result: T[] = [];
+    result = result.concat(...arrays);
+    return result;
+}
 
 
